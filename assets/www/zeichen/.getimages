@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Usage: ./.getimages {sign map target directory}
+
+#
+# Get data
+#
+
+# get wiki page
+curl --data "action=query&prop=revisions&format=txt&rvprop=content&rvlimit=1&titles=Bildtafel%20der%20Verkehrszeichen%20in%20der%20Bundesrepublik%20Deutschland%20von%201992%20bis%202009" http://de.wikipedia.org/w/api.php > tmp-page
+
+# extract only relevant data (res: xxx.svg meaning of sign xxx)
+pattern='s@Datei:(.*.svg)\|(<center>([^<]*<br[^>]*>)?)?([^<]*).*@\1 \4@g'
+grep '^Datei:*' tmp-page | sed -r -e "$pattern" > bedeutung
+
+
+#
+# Download actual images
+#
+
+# get filenames and split list for wikipedia to handle
+sed -r -e 's@(.*.svg).*@File:\1@' bedeutung | split -l 50
+#-> xaa - xai
+
+baseopts="action=query&prop=imageinfo&iiprop=url&format=json"
+
+for file in $(find . -name 'x*'); do
+   pageopts=$baseopts"&titles="$(tr '\n' '|' < $file)
+   curl --data "$pageopts" http://commons.wikimedia.org/w/api.php > tmp-json
+   grep -o 'http://upload[^"]*' tmp-json > tmp-filenames
+   wget -i tmp-filenames --restrict-file-names=nocontrol
+done
+
+
+#
+# Convert SVG images to GIF
+#
+
+for imgname in $(ls *.svg | sed -r -e 's/(.*).svg/\1/g'); do
+   convert $imgname".svg" $imgname".gif"
+done
+
+
+#
+# Clean up
+#
+
+rm tmp*
+rm x*
+#rm *.svg
+
+mv ./bedeutung "$1"
+

@@ -1,0 +1,6 @@
+#!/bin/bash   
+
+lein cljsbuild once dev
+cd assets
+cordova run android
+cd ..
