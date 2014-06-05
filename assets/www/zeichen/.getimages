@@ -40,6 +40,17 @@ for imgname in $(ls *.svg | sed -r -e 's/(.*).svg/\1/g'); do
    convert $imgname".svg" $imgname".gif"
 done
 
+#
+# Take care of non-Ascii characters
+#
+
+for imgname in $(ls *.svg | sed -r -e 's/(.*).svg/\1/g'); do
+   newname=$(echo "$imgname".gif | recode ..html)
+   if [ "$imgname".gif != "$newname" ]
+      then mv -f ./"$imgname".gif ./"$newname"
+   fi
+done
+recode ..html bedeutung
 
 #
 # Clean up
@@ -47,7 +58,7 @@ done
 
 rm tmp*
 rm x*
-#rm *.svg
+rm *.svg
 
 mv ./bedeutung "$1"
 
