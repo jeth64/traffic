@@ -1,37 +1,10 @@
 (ns traffic.app
-  (:require-macros [traffic.macros :as tm]))
-
-
-;;
-;; local storage
-;;
-
-;; general
-
-(defn store [key value]
-  (.setItem (.-localStorage js/window) key value))
-
-(defn get-stored [key]
-  (.getItem (.-localStorage js/window) key))
-
-(defn rm-stored [key]
-  (.removeItem (.-localStorage js/window) key))
-
-(defn store-empty? []
-  (= nil (.key (.-localStorage js/window) 0)))
-
-(defn empty-store []
-  (.clear (.-localStorage js/window) ))
-
-
-;; specific
-
-(defn fill-store
-  "Parse and store traffic signs as list of maps"
-  [target-key]
-  (if (= nil (get-stored target-key))
-    (store target-key (map #(zipmap [:title :bedeutung] %)
-                           (tm/sign-list "resources/zeichenmap")))))
+  (:require [traffic.storage :refer [fill-store]]
+            [kioo.om :refer [content set-attr do-> substitute listen]]
+            [kioo.core :refer [handle-wrapper]]
+            [om.core :as om :include-macros true]
+            [om.dom :as dom :include-macros true])
+  (:require-macros [kioo.om :refer [defsnippet deftemplate]]))
 
 
 ;;
@@ -41,7 +14,7 @@
 (defn ^:export prompt
   "Uses native notifications if possible"
   [msg]
-  (try (-> (js* "navigator") (.-notification) (.alert msg (fn [] nil) "" ""))
+  (try (.alert (.-notification js/navigator) msg (fn [] nil) "" "")
        (catch :default e (js/alert msg))))
 
 
