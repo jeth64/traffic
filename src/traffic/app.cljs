@@ -1,9 +1,15 @@
 (ns traffic.app)
 
 
-(defn  ^:export onDeviceReady []
-  (-> (js* "navigator") (.-notification)
-      (.alert "PhoneGap is working" (fn [] nil) "" "")))
+(defn ^:export prompt
+  [msg]
+  (try (-> (js* "navigator") (.-notification) (.alert msg (fn [] nil) "" ""))
+       (catch :default e (js/alert msg))))
+
+
+(defn ^:export onDeviceReady []
+  (prompt "PhoneGap is working"))
+
 
 (defn  ^:export initialize []
   (.addEventListener js/document "deviceready" onDeviceReady true))
