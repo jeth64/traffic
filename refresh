@@ -1,5 +1,6 @@
 #!/bin/bash
 
+lein cljsbuild clean
 lein cljsbuild once dev
 
 if [ "$1" == "device" ]

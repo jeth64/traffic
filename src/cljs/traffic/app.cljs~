@@ -1,0 +1,17 @@
+(ns traffic.app)
+
+
+(defn  ^:export onDeviceReady []
+  (-> (js* "navigator") (.-notification) (.alert "PhoneGap is working" (fn [] nil) "" ""))
+ ;; (js/alert "onDeviceReady") ;; use timeouts? wie???
+  )
+
+;;(defn  ^:export android? [] (> (-> (.-userAgent js/navigator) (.indexOf "Android")) 0))
+
+(defn  ^:export initialize []
+  ;;(js/alert "init")
+ ;;  (if android?
+    ;;   (-> (.createElement js/document "script") (.attr "src" "cordova.js") (.appendTo "head"))
+    ;;  (-> (.createElement js/document "script") (.attr "src" "lib/ubuntu/cordova.js") (.appendTo "head"))  )
+  (.addEventListener js/document "deviceready" onDeviceReady true)
+  )

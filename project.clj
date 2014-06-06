@@ -4,15 +4,20 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojurescript "0.0-2173"]]
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [org.clojure/clojurescript "0.0-2173"]]
 
   :plugins [[lein-cljsbuild "1.0.1"]]
 
-  :cljsbuild {:builds {:dev {:source-paths ["src"]
+  :source-paths ["src/clj" "src/cljs"]
+
+  :hooks [leiningen.cljsbuild]
+
+  :cljsbuild {:builds {:dev {:source-paths ["src/cljs"]
                              :compiler {:output-to "assets/www/js/index.js"
                                         :optimizations :simple
                                         :pretty-print true}}
-                       :prod {:source-paths ["src"]
+                       :prod {:source-paths ["src/cljs"]
                               :compiler {:output-to "assets/www/js/index.js"
                                          :optimizations :advanced
                                          :pretty-print false}}}})
