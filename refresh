@@ -1,6 +1,23 @@
-#!/bin/bash   
+#!/bin/bash
 
 lein cljsbuild once dev
-cd assets
-cordova run android
-cd ..
+
+if [ "$1" == "device" ]
+   then
+   cd assets
+   mv www/cordova.js www/.cordova.js
+   mv www/cordova_plugins.js www/.cordova_plugins.js
+   mv www/config.xml www/.config.xml
+   cordova run android
+   mv www/.config.xml www/config.xml
+   mv www/.cordova_plugins.js www/cordova_plugins.js
+   mv www/.cordova.js www/cordova.js
+   cd ..
+   else
+   cd assets/www
+   php -S localhost:8008
+   cd ../..
+fi
+
+
+
