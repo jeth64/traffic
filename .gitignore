@@ -1,0 +1,5 @@
+assets/platforms/*
+assets/www/js/index.js
+target/*
+assets/npm-debug.log
+assets/www/zeichen/*.gif
