@@ -30,7 +30,7 @@
 ;; page setup
 ;;
 
-(defsnippet my-nav-item "main.html" [:.nav-item]
+(defsnippet my-nav-item "main.html" [:#nav-item]
   [[caption func]]
   {[:a] (do-> (content caption)
               (listen :onClick #(func caption)))})
@@ -41,21 +41,24 @@
 
 (defsnippet my-navigation "main.html" [:.content]
   [{:keys [navigation]}]
-  {[:table] (content (map my-nav-item navigation))})
-
+  {[:#navigation] (content (map my-nav-item navigation))})
 
 (deftemplate my-page "main.html"
   [data]
   {[:header] (substitute (my-header data))
    [:.content] (substitute (my-navigation data))})
 
+
 (defn init [data]
-  (initialize)
+ ;; (initialize)
   (om/component (my-page data)))
 
-(def app-state (atom {:heading "main"
-                      :content "Hello World"
-                      :navigation [["home" #(js/alert %)]
-                                   ["next" #(js/alert %)]]}))
+(def app-state (atom {:heading "Verkehrszeichen"
+                      :navigation [["Gefahrzeichen" #(js/alert %)]
+                                   ["Vorschriftzeichen" #(js/alert %)]
+                                   ["Richtzeichen" #(js/alert %)]
+                                   ["Verkehrslenkungseinrichtung" #(js/alert %)]
+                                   ["Zusatzzeichen" #(js/alert %)]
+                                   ["Sinnbilder" #(js/alert %)]]}))
 
 (om/root init app-state {:target  (.-body js/document)})
