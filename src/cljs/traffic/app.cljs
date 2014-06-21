@@ -1,15 +1,25 @@
 (ns traffic.app
   (:require [traffic.storage :refer [fill-store empty-store get-stored]]
+            [clojure.string :refer [split]]
             [kioo.om :refer [content set-attr do-> substitute listen wrap]]
             [kioo.core :refer [handle-wrapper]]
             [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]
-            [cljs.reader :refer [read-string]])
+            [cljs.reader :refer [read-string]]
+            [clojure.set :refer [intersection]])
   (:require-macros [kioo.om :refer [defsnippet deftemplate]]))
 
 (declare main-page main-state detail-page)
 
 (def signmapname "traffic-signs")
+
+;;
+;; helper functions
+;;
+
+(defn get-tags [str]
+  (set (split (.toLowerCase str) #"\W+")))
+
 
 ;;
 ;; Exported functions
@@ -23,13 +33,21 @@
 
 
 (defn ^:export onDeviceReady []
-  (prompt "PhoneGap is working"
-          ))
+  (prompt "PhoneGap is working"))
 
 
 (defn  ^:export initialize []
   (fill-store signmapname)
   (.addEventListener js/document "deviceready" onDeviceReady true))
+
+(defn search [search-str]
+  (let [words (get-tags search-str)
+        signmap (read-string (get-stored signmapname))
+        results1 (filter #(not-empty (intersection words (get-tags (:kategorie %))))
+                         signmap)
+        results2 (filter #(not-empty (intersection words (get-tags (:bedeutung %))))
+                         signmap)]
+    (set (concat results1 results2))) )
 
 ;;
 ;; shortcuts for kioo templating
@@ -53,9 +71,8 @@
 
 (defn text-search-result-state [search-str] ;; dummy state
   (atom {:heading "Suche"
-         :topic (str "Ergebnisse für \"" search-str "\":")
-         :list (filter #(= "-" (:kategorie %))
-                       (read-string (get-stored signmapname)))}))
+         :topic (str "Ergebnisse für \"" search-str "\"")
+         :list (search search-str)}))
 
 (def photo-search-result-state ;; [photo];; dummy state
   (atom {:heading "Suche"
