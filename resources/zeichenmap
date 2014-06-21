@@ -23,7 +23,7 @@ Zeichen 110-50.svg Steigung 4%
 Zeichen 112 &ndash; Unebene Fahrbahn.svg unebene Fahrbahn
 Zeichen 113.svg Schnee- oder Eisgl&auml;tte
 Zeichen_114_-_Schleudergefahr_bei_N&auml;sse_und_Schmutz,_StVO_1992.svg Schleudergefahr bei N&auml;sse und Schmutz
-Zeichen 115.svg Steinschlag
+Zeichen 115-10.svg Steinschlag
 Zeichen 116.svg Splitt, Schotter
 Zeichen 117-10 - Seitenwind von rechts, StVO 1992.svg Seitenwind
 Zeichen 120.svg  Verengte Fahrbahn
@@ -35,29 +35,29 @@ Zeichen 125.svg Gegenverkehr
 Zeichen_128_-_Bewegliche_Br&uuml;cke,_StVO_1992.svg bewegliche Br&uuml;cke
 Zeichen 129.svg Ufer
 Zeichen 131.svg Lichtzeichenanlage
-Zeichen 133.svg Fu&szlig;g&auml;nger
-Zeichen 134.svg Fu&szlig;g&auml;nger&uuml;berweg
-Zeichen 136.svg Kinder
-Zeichen 138.svg Radfahrer kreuzen
-Zeichen 140.svg Viehtrieb, Tiere
-Zeichen 142.svg Wildwechsel
-Zeichen 144.svg Flugbetrieb
+Zeichen 133-10.svg Fu&szlig;g&auml;nger
+Zeichen 134-10.svg Fu&szlig;g&auml;nger&uuml;berweg
+Zeichen 136-10.svg Kinder
+Zeichen 138-10.svg Radfahrer kreuzen
+Zeichen 140-10.svg Viehtrieb, Tiere
+Zeichen 142-10.svg Wildwechsel
+Zeichen 144-10.svg Flugbetrieb
 Zeichen 145.svg Kraftomnibusse
 Zeichen 151.svg unbeschrankter Bahn&uuml;bergang
 Zeichen 153.svg dreistreifige Bake (links) &ndash; vor beschranktem Bahn&uuml;bergang &ndash;
-Zeichen 156.svg dreistreifige Bake (rechts) &ndash; vor unbeschranktem Bahn&uuml;bergang &ndash;
+Zeichen 156-10.svg dreistreifige Bake (rechts) &ndash; vor unbeschranktem Bahn&uuml;bergang &ndash;
 Zeichen 157.svg dreistreifige Bake
 Zeichen 159.svg zweistreifige Bake
-Zeichen 162.svg einstreifige Bake
+Zeichen 162-10.svg einstreifige Bake
 Zeichen 201.svg Andreaskreuz: Dem Schienenverkehr Vorrang gew&auml;hren!
 Zeichen 205.svg Vorfahrt gew&auml;hren!
 Zeichen 206.svg Halt! Vorfahrt gew&auml;hren!
 Zeichen 208.svg dem Gegenverkehr Vorrang gew&auml;hren!
-Zeichen 209.svg vorgeschriebene Fahrtrichtung - rechts
+Zeichen 209-20.svg vorgeschriebene Fahrtrichtung - rechts
 Zeichen 209-30.svg vorgeschriebene Fahrtrichtung - geradeaus
-Zeichen 211.svg vorgeschriebene Fahrtrichtung - hier rechts
-Zeichen 214.svg vorgeschriebene Fahrtrichtung - geradeaus und rechts
-Zeichen 220.svg Einbahnstra&szlig;e
+Zeichen 211-20.svg vorgeschriebene Fahrtrichtung - hier rechts
+Zeichen 214-20.svg vorgeschriebene Fahrtrichtung - geradeaus und rechts
+Zeichen 220-20.svg Einbahnstra&szlig;e
 Zeichen_222-20.svg vorgeschriebene Vorbeifahrt - rechts vorbei
 Zeichen 224.svg Haltestellen Stra&szlig;enbahnen oder Linienbusse
 Zeichen 229 - Taxenstand.svg Taxenstand
@@ -65,7 +65,7 @@ Zeichen 237.svg Sonderweg Radfahrer
 Zeichen 238.svg Sonderweg Reiter
 Zeichen 239.svg Sonderweg Fu&szlig;g&auml;nger
 Zeichen 240.svg gemeinsamer Fu&szlig;- und Radweg
-Zeichen 241.svg getrennter Rad- und Fu&szlig;weg
+Zeichen 241-30.svg getrennter Rad- und Fu&szlig;weg
 Zeichen 242.svg Beginn eines Fu&szlig;g&auml;ngerbereichs
 Zeichen 243.svg Ende eines Fu&szlig;g&auml;ngerbereichs
 Zeichen 245.svg Linienomnibusse
@@ -90,13 +90,13 @@ Zeichen 269.svg Verbot f&uuml;r Fahrzeuge mit wassergef&auml;hrdender Ladung
 Zeichen 270 - Zonenverkehrsverbot bei Smog, StVO 1976.svg Verkehrsverbot bei Smog oder zur Verminderung sch&auml;dlicher Luftverunreinigungen
 Zeichen 272, StVO 1992.svg Wendeverbot
 Zeichen 273.svg Verbot des Fahrens ohne einen Mindestabstand
-Zeichen 274.svg zul&auml;ssige H&ouml;chstgeschwindigkeit
+Zeichen 274-56.svg zul&auml;ssige H&ouml;chstgeschwindigkeit
 Zeichen 274.1.svg Beginn der Zone mit zul&auml;ssiger H&ouml;chstgeschwindigkeit
 Zeichen 274.2.svg Ende der Zone mit zul&auml;ssiger H&ouml;chstgeschwindigkeit
 Zeichen 275.svg vorgeschriebene Mindestgeschwindigkeit
 Zeichen 276.svg &Uuml;berholverbot f&uuml;r Kraftfahrzeuge aller Art
 Zeichen 277.svg &Uuml;berholverbot f&uuml;r Kraftfahrzeuge mit einem zul&auml;ssigen Gesamtgewicht &uuml;ber 3,5 t, einschlie&szlig;lich ihrer Anh&auml;nger, und von Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse
-Zeichen 278.svg Ende der zul&auml;ssigen H&ouml;chstgeschwindigkeit
+Zeichen 278-56.svg Ende der zul&auml;ssigen H&ouml;chstgeschwindigkeit
 Zeichen 279.svg Ende der vorgeschriebenen Mindestgeschwindigkeit
 Zeichen 280.svg Ende des &Uuml;berholverbotes f&uuml;r Kraftfahrzeuge aller Art
 Zeichen 281.svg Ende des &Uuml;berholverbotes f&uuml;r Kraftfahrzeuge mit einem zul&auml;ssigen Gesamtgewicht &uuml;ber 3,5 t, einschlie&szlig;lich ihrer Anh&auml;nger, und f&uuml;r Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse
@@ -107,7 +107,7 @@ Zeichen 290.svg eingeschr&auml;nktes Haltverbot f&uuml;r eine Zone
 Zeichen 291.svg Parkscheibe
 Zeichen 292.svg Ende eines eingeschr&auml;nkten Haltverbotes f&uuml;r eine Zone
 Zeichen_293_-_Fu&szlig;g&auml;nger&uuml;berweg,_StVO_1970.svg Fu&szlig;g&auml;nger&uuml;berweg
-Zeichen 294.svg Haltlinie
+Zeichen_294_-_Haltlinie,_StVO_1970.svg Haltlinie
 Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg Fahrstreifenbegrenzung und Fahrbahnbegrenzung
 Zeichen_296_-_Einseitige_Fahrstreifenbegrenzung,_StVO_1970.svg einseitige Fahrstreifenbegrenzung
 Zeichen_297_-_Richtungspfeile,_StVO_1970.svg Pfeile
@@ -116,14 +116,14 @@ Zeichen 298 - Sperrfl&auml;chen, StVO 1970.svg Sperrfl&auml;che
 Zeichen 299 - Grenzmarkierung f&uuml;r Halt- und Parkverbote, StVO 1992.svg Grenzmarkierung f&uuml;r Halt- und Parkverbote
 Zeichen 301.svg Vorfahrt
 Zeichen_306_-_Vorfahrtstra&szlig;e,_StVO_1970.svg Vorfahrtstra&szlig;e
-Zeichen 307.svg Ende der Vorfahrtstra&szlig;e. Das Zeichen wurde in dieser Form bereits 1980 vorgestellt und ist seit 1. Januar 1981 g&uuml;ltig.
+Zeichen_307,_StVO_1980.svg Ende der Vorfahrtstra&szlig;e. Das Zeichen wurde in dieser Form bereits 1980 vorgestellt und ist seit 1. Januar 1981 g&uuml;ltig.
 Zeichen 308.svg Vorrang vor dem Gegenverkehr
 Zeichen 310.svg Ortstafel (Vorderseite)
 Zeichen 311.svg Ortstafel (R&uuml;ckseite)
 Zeichen 314.svg Parkplatz
 Zeichen_315-55.svg Parken auf Gehwegen
 Zeichen 316.svg Parken und Reisen
-zeichen 317.svg Wandererparkplatz
+Zeichen 317.svg Wandererparkplatz
 Zeichen_325.1.svg Beginn eines verkehrsberuhigten Bereichs
 Zeichen 325.2.svg Ende eines verkehrsberuhigten Bereichs
 Zeichen 330.svg Autobahn
@@ -132,9 +132,9 @@ Zeichen 332.svg Ausfahrt
 Zeichen 333.svg Ausfahrt von der Autobahn
 Zeichen 334.svg Ende der Autobahn
 Zeichen 336.svg Ende der Kraftfahrstra&szlig;e
-Zeichen 340.svg Leitlinie
+Zeichen_340_&ndash;_Leitlinie,_StVO_1970.svg Leitlinie
 Zeichen 341 &ndash; Wartelinie, StVO 1970.svg Wartelinie
-Zeichen 350.svg Fu&szlig;g&auml;nger&uuml;berweg
+Zeichen 350-10.svg Fu&szlig;g&auml;nger&uuml;berweg
 Zeichen_353_-_Hinweis_auf_eine_Einbahnstra&szlig;e,_StVO_1992.svg Einbahnstra&szlig;e
 Zeichen 354.svg Wasserschutzgebiet
 Zeichen 355 - Fu&szlig;g&auml;ngerunter- oder -&uuml;berf&uuml;hrung, StVO 1992.svg Fu&szlig;g&auml;ngerunter- oder -&uuml;berf&uuml;hrung
@@ -163,8 +163,8 @@ Zeichen 389.svg Seitenstreifen f&uuml;r Fahrzeuge mit einem zul&auml;ssigen Gesa
 Zeichen_392_-_Zollstelle,_StVO_1970.svg Zollstelle
 Zeichen 393.svg Informationstafel an Grenz&uuml;bergangsstellen
 Zeichen 394.svg Hinweis auf Laternen, die nicht die ganze Nacht brennen
-Zeichen 401.svg Nummernschild f&uuml;r Bundesstra&szlig;en
-Bundesautobahn 48 number.svg Nummernschild f&uuml;r Autobahnen
+Zeichen_401.svg Nummernschild f&uuml;r Bundesstra&szlig;en
+Zeichen_405.svg Nummernschild f&uuml;r Autobahnen
 Zeichen 406.svg Knotenpunkte der Autobahnen (Autobahnausfahrten, Autobahnkreuze und Autobahndreiecke)
 Zeichen 410.svg Nummernschild f&uuml;r Europastra&szlig;en
 Zeichen 415.svg Wegweiser auf Bundesstra&szlig;en
@@ -180,19 +180,19 @@ Zeichen 437.svg Stra&szlig;ennamensschild
 Zeichen_438,_StVO_1992.svg Vorwegweiser
 Zeichen 439.svg gegliederter Vorwegweiser
 Zeichen 440.svg Vorwegweiser zur Autobahn
-Zeichen 442.svg Vorwegweiser f&uuml;r bestimmte Verkehrsarten
+Zeichen 442-20.svg Vorwegweiser f&uuml;r bestimmte Verkehrsarten
 Zeichen 448.svg Ank&uuml;ndigungstafel auf Autobahnen
 Zeichen 449.svg Vorwegweiser auf Autobahnen
 Zeichen 450.svg Ank&uuml;ndigungsbake (dreistreifig)
 Zeichen 451.svg Ank&uuml;ndigungsbake (zweistreifig)
 Zeichen 452.svg Ank&uuml;ndigungsbake (einstreifig)
 Zeichen 453.svg Entfernungstafel auf Autobahnen
-Zeichen 454.svg Umleitungswegweiser
+Zeichen 454-20.svg Umleitungswegweiser
 Zeichen 455-30.svg nummerierte Umleitung
 Zeichen 457.svg Umleitungsank&uuml;ndigung
 Zeichen 458.svg Planskizze
 Zeichen 459.svg Ende einer Umleitung
-Zeichen 460.svg Bedarfsumleitung
+Zeichen 460-30.svg Bedarfsumleitung
 Zeichen 466.svg Bedarfsumleitungstafel
 Zeichen 467.1.svg Umlenkungspfeil
 Zeichen 468.svg schwierige Verkehrsf&uuml;hrung
@@ -221,7 +221,7 @@ Zeichen 615.svg fahrbare Absperrtafel
 Zeichen 616.svg fahrbare Absperrtafel mit Blinkpfeil
 Zeichen 620-40.svg Leitpfosten (rechts)
 Zeichen 620-41.svg Leitpfosten (links)
-Zeichen 625.svg Richtungstafel in Kurven
+Zeichen 625-11.svg Richtungstafel in Kurven
 Zeichen 630.svg Park-Warntafel
 Zusatzzeichen 1000-10.svg Richtung, linksweisend
 Zusatzzeichen 1000-11.svg Richtung der Gefahrstelle, linksweisend
@@ -413,6 +413,6 @@ Zusatzzeichen 1031-51.svg Freistellung vom Verkehrsverbot nach &sect; 40 Absatz 
 Zeichen 365-51.svg Notrufs&auml;ule
 Zusatzzeichen 1014-50 - Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (B), StVO 2007.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (B)
 Zusatzzeichen 1014-51 - Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (C), StVO 2007.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (C)
-Zusatzzeichen 1014-52.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (D)
-Zusatzzeichen 1014-53.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (E)
+Zusatzzeichen 1014-52 - Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (D), StVO 2007.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (D)
+Zusatzzeichen 1014-53 - Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (E), StVO 2007.svg Tunnelkategorie gem&auml;&szlig; ADR-&Uuml;bereinkommen (E)
 Baustelleninfo.svg Baustelleninformations-schild Bundesautobahn
