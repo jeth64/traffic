@@ -7,7 +7,7 @@
             [cljs.reader :refer [read-string]])
   (:require-macros [kioo.om :refer [defsnippet deftemplate]]))
 
-(declare main-page main-state)
+(declare main-page main-state detail-page)
 
 (def signmapname "traffic-signs")
 
@@ -28,7 +28,6 @@
 
 
 (defn  ^:export initialize []
-  (empty-store)
   (fill-store signmapname)
   (.addEventListener js/document "deviceready" onDeviceReady true))
 
@@ -40,6 +39,29 @@
 (defn jump-to [page state]
   (om/root #(om/component (page %)) state {:target (.-body js/document)}))
 
+
+
+;;
+;; sign page states
+;;
+
+(defn detail-state [section]
+  (atom {:heading section
+         :topic ""
+         :list (filter #(= section (:kategorie %))
+                       (read-string (get-stored signmapname)))}))
+
+(defn text-search-result-state [search-str] ;; dummy state
+  (atom {:heading "Suche"
+         :topic (str "Ergebnisse für \"" search-str "\":")
+         :list (filter #(= "-" (:kategorie %))
+                       (read-string (get-stored signmapname)))}))
+
+(def photo-search-result-state ;; [photo];; dummy state
+  (atom {:heading "Suche"
+         :topic "Ergebnisse der Fotosuche:"
+         :list (filter #(= "-" (:kategorie %))
+                       (read-string (get-stored signmapname)))}))
 
 ;;
 ;; signs page setup
@@ -53,7 +75,14 @@
 (defsnippet detail-header "detail.html" [:#navigation]
   [{:keys [heading]}]
   {[:#back] (listen :onClick #(jump-to main-page main-state))
-   [:#section-title] (content (str "    " heading))})
+   [:#title] (content (str "    " heading))
+   [:#text-search] (listen :onClick
+                           #(jump-to detail-page
+                                     (text-search-result-state
+                                      (.-value (.getElementById
+                                                js/document "text-search-text")))))
+   [:#file-search] (listen :onClick #(jump-to detail-page photo-search-result-state))
+   [:#photo-search] (listen :onClick #(jump-to detail-page photo-search-result-state))})
 
 (defsnippet detail-list "detail.html" [:#content]
   [{:keys [list]}]
@@ -62,13 +91,8 @@
 (deftemplate detail-page "detail.html"
   [data]
   {[:#navigation] (substitute (detail-header data))
+   [:#topic] (content (:topic data))
    [:#content] (substitute (detail-list data))})
-
-(defn detail-state [section]
-  (atom {:heading section
-         :list (filter #(= section (:kategorie %))
-                       (read-string (get-stored signmapname)))}))
-
 
 
 ;;
@@ -80,9 +104,6 @@
   {[:a] (do-> (content caption)
               (listen :onClick #(jump-to detail-page (detail-state caption))))})
 
-(defsnippet main-header "main.html" [:header]
-  [{:keys [heading]}]
-  {[:h1] (content heading)})
 
 (defsnippet main-navigation "main.html" [:.content]
   [{:keys [navigation]}]
@@ -91,19 +112,19 @@
 
 (deftemplate main-page "main.html"
   [data]
-  {[:header] (substitute (main-header data))
+  {[:#title] (content (:heading data))
    [:.content] (substitute (main-navigation data))})
 
 
 (def main-state (atom {:heading "Verkehrszeichen"
                        :navigation ["Gefahrzeichen"
-                                   "Vorschriftzeichen"
-                                   "Richtzeichen"
-                                   "Verkehrslenkungstafeln"
-                                   "Verkehrseinrichtungen"
-                                   "Zusatzzeichen"
-                                   "Sinnbilder"
-                                   "Autobahnschilder"]}))
+                                    "Vorschriftzeichen"
+                                    "Richtzeichen"
+                                    "Verkehrslenkungstafeln"
+                                    "Verkehrseinrichtungen"
+                                    "Zusatzzeichen"
+                                    "Sinnbilder"
+                                    "Autobahnschilder"]}))
 
 
 (initialize)

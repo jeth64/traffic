@@ -2,21 +2,42 @@
 <html lang="en">
    <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navigation">
+      <div class="container-fluid" id="navigation">
+
           <ul class="nav navbar-nav navbar-left">
-          <li>
-            <button type="button" class="btn btn-default navbar-btn" id="back">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-            </button>
-          </li>
-          <li>
-            <a href="#" id="section-title">Section</a>
-          </li>
+            <li>
+              <button type="button" class="btn btn-default navbar-btn" id="back">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </button>
+            </li>
+            <li>
+              <p class="navbar-text" id="title"> Page title </p>
+            </li>
           </ul>
-        </div>
+
+          <form class="navbar-form navbar-right" role="search">
+            <input type="text" id="text-search-text" placeholder="Suche">
+            <div class="btn-group">
+              <button class="btn btn-default navbar-btn" id="text-search">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+              <button type="btn btn-default navbar-btn"
+                      class="btn dropdown-toggle btn-default navbar-btn" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>Fotosuche:</li>
+                <li><a href="#" id="file-search">Datei</a></li>
+                <li><a href="#" id="photo-search">Neu</a></li>
+              </ul>
+            </div>
+          </form>
+
       </div>
     </nav>
+
+    <p id="topic"> </p>
 
     <div class="table-responsive" id="content">
       <table class="table" id="sign-list" >
@@ -24,7 +45,7 @@
           <td >
             <img id="sign-img" class="img-responsive" alt="Responsive image">
           </td>
-          <td id="sign-meaning"> Gefahrenstelle </td>
+          <td id="sign-meaning">  </td>
         </tr>
       </table>
     </div>
